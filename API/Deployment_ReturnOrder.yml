@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ReturnOrderManagementService
 spec:
-  replicas:
+  replicas: 1
   selector:
     matchLabels:
       app: ReturnOrderManagementService
