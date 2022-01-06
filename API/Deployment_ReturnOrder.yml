@@ -1,21 +1,21 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: returnordermanagement-deployment
+  name: returnorderserviceimage-deployment
   labels:
-    app: ReturnOrderManagementService
+    app: returnorderserviceimage
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ReturnOrderManagementService
+      app: returnorderserviceimage
   template:
     metadata:
       labels:
-        app: ReturnOrderManagementService
+        app: returnorderserviceimage
     spec:
       containers:
-      - name: returnordermanagementservice
+      - name: returnorderserviceimage
         image: returnorderprojectcr.azurecr.io/returnorderserviceimage:latest
         ports:
         - containerPort: 8080
@@ -31,4 +31,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: ReturnOrderManagementService
+    app: returnorderserviceimage
